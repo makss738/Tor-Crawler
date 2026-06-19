@@ -1,15 +1,12 @@
 import requests
 
 proxies = {
-    'http': 'localhost:8118',
-    'https': 'localhost:8118'
+    "http": "socks5h://127.0.0.1:9050",
+    "https": "socks5h://127.0.0.1:9050"
 }
 
-print "Tor IP: " + requests.get("http://icanhazip.com").text
+print("[+] Testing Tor IP...")
 
-url = "http://duskgytldkxiuqc6.onion/"
-
-
-print "test: " + requests.get(url).text
-
-
+print(
+    requests.get("http://icanhazip.com", proxies=proxies).text.strip()
+)
