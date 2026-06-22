@@ -24,7 +24,7 @@ Change the configuration of `/etc/polipo/config` to that of `polipo.conf` (inclu
 
 Polipo will run on port 8118, Tor on the default port of 9050.
 
-Test a request
+Make a request
 
 `curl --proxy localhost:8118 http://duskgytldkxiuqc6.onion/`
 
